@@ -1,29 +1,15 @@
-import random 
-'''
-Step 1:
-Create a list containing the names of your 5 favorite fruits.
-
-
-Step 2:
-Assign this list to a variable called word_list.
-
-
-Step 3:
-Print out the newly created list to the standard output (screen). 
-'''
-
-word_list = ['banana', 'avocado', 'apple', 'watermelon', 'grapes']
+import random
+word_list = ['banana', 'apple', 'avocado', 'watermelon','grapes']
 print(word_list)
-
-'''
-To accomplish this task, you will need to use the 'random' module.
-The random module is one of Python's built-in modules.
-It has a choice method which returns a random item from a given sequence.
-'''
 word = random.choice(word_list)
 print(word)
 guess = input('Enter a single letter: ')
+
 '''
+Usually, when taking input from users, it is best to validate that the input makes sense.
+For example, we may want to ensure that only a single letter is entered and that only alphabetical characters are 
+provided by the user.
+To do this, create conditional checks that must be passed before the input can be accepted.
 Step 1:
 Create an if statement that checks if the length of the input is equal to 1 and the input is alphabetical.
 Step 2:
@@ -33,6 +19,6 @@ Create an else block that prints "Oops! That is not a valid input." if the prece
 '''
 if len(guess) == 1 and guess.isalpha():
     print('Good guess!')
-else:
+else: 
     print('Oops! That is not a valid input.')
 
